@@ -9,6 +9,7 @@ module RQRCode
 
   extend SizeCalculator
 
+
   ActionController::Renderers.add :qrcode do |string, options|
     format = self.request.format.symbol
 
