@@ -26,7 +26,7 @@ module RQRCode
     self.response_body = render_to_string(:text => data, :template => nil)
   end
 
-  def svg(string, options)
+  def self.svg(string, options)
     size   = options[:size]  || RQRCode.minimum_qr_size_from_string(string)
     level  = options[:level] || :h
 
