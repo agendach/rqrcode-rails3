@@ -12,7 +12,7 @@ module RQRCode
   ActionController::Renderers.add :qrcode do |string, options|
     format = self.request.format.symbol
 
-    svg = svg(string, options)
+    self.svg = svg(string, options)
 
     data = \
     if format == :png
